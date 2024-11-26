@@ -1,0 +1,12 @@
+/* src/LogoutButton.css */
+.logout-button {
+    background-color: #56a5ec;
+    color: white;
+    font-size: 16px; 
+    cursor: pointer; 
+    border: none;
+    border-radius: 4px; 
+    width: 100px;
+    height: 30px; 
+    margin-left: 20px;
+}
