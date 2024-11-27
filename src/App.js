@@ -1,10 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './Login';
-import Timetable from './Timetable';
-import Students from './Students';
-import ProtectedRoute from './ProtectedRoute';
-import NotFound from './NotFound';
+import Login from './components/Login';
+import Timetable from './components/TimeTable';
+import Students from './components/Students';
+import ProtectedRoute from './components/ProtectedRoute';
 
 const App = () => {
     return (
@@ -16,18 +15,17 @@ const App = () => {
                     element={
                         <ProtectedRoute>
                             <Timetable />
-                        </ProtectedRoute>
+                         </ProtectedRoute>
                     } 
                 />
                 <Route 
                     path="/courses/:courseId/students" 
                     element={
-                        <ProtectedRoute>
+                         <ProtectedRoute>
                             <Students />
-                        </ProtectedRoute>
+                         </ProtectedRoute>
                     } 
                 />
-                <Route path="*" element={<NotFound />} />
             </Routes>
         </Router>
     );
